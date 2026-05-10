@@ -4,115 +4,111 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ioanna Garefalaki</title>
-
 <style>
 body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   line-height: 1.7;
-  color: #222;
-  background: #fafafa;
+  color: #2b2d42; /* Deep charcoal for better readability */
+  background: #fdfcdc; /* The "Sand" color from your palette as a soft background */
 }
 
 .section {
-  padding: 40px 20px;
+  padding: 60px 20px;
   max-width: 900px;
   margin: 0 auto;
+  background: #ffffff; /* White cards for the content */
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Subtle shadow for depth */
 }
 
 /* --- Improved Top Section --- */
 .top-section {
   display: flex;
   gap: 50px;
-  align-items: center; /* Centers items vertically */
-  padding-top: 80px;
+  align-items: center;
+  padding-top: 60px;
+  background: transparent; /* Top part stays on the sand background */
+  box-shadow: none;
 }
 
 .top-section img {
   width: 200px;
   height: 200px;
-  object-fit: cover; /* Keeps photo from stretching */
-  
-  /* --- ADD THIS LINE BELOW --- */
-  object-position: 50% 20%; /* Moves the photo's center down, moving your head up into frame */
-  
-  border-radius: 50%; /* Makes it a circle */
-  border: 3px solid #eee;
+  object-fit: cover;
+  object-position: 50% 20%; 
+  border-radius: 50%;
+  border: 4px solid #00afb9; /* Teal border from your palette */
 }
 
 .top-section .intro h1 {
   margin: 0;
   font-size: 42px;
   font-weight: 800;
-  letter-spacing: -1px;
+  color: #0081a7; /* Deep Teal for your name */
 }
 
 .subtitle {
-  font-size: 1.2em;
-  color: #555;
-  margin-top: 5px;
+  font-size: 1.1em;
+  color: #f07167; /* The Coral color for your title - makes it pop! */
+  font-weight: 600;
 }
 
 /* --- Button Style Links --- */
-.links-container {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
 .btn {
-  padding: 8px 16px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 20px;
+  padding: 10px 20px;
+  background: #fed9b7; /* Peach color for buttons */
+  border: none;
+  border-radius: 25px;
   font-size: 14px;
-  font-weight: 500;
-  color: #333 !important;
-  transition: all 0.2s;
+  font-weight: 600;
+  color: #0081a7 !important; /* Deep Teal text */
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #0366d6;
+  background: #00afb9; /* Switches to Teal on hover */
   color: #fff !important;
-  border-color: #0366d6;
-  text-decoration: none;
+  transform: translateY(-2px); /* Tiny lift effect */
 }
 
 h2 {
-  margin-top: 50px;
-  font-size: 24px;
-  border-bottom: 1px solid #eaeaea;
-  padding-bottom: 10px;
-  color: #111;
-}
-
-.project {
-  margin-bottom: 40px;
+  margin-top: 0;
+  font-size: 26px;
+  color: #0081a7;
+  border-bottom: 2px solid #fed9b7; /* Peach underline */
+  padding-bottom: 8px;
 }
 
 .project h3 {
-  margin-bottom: 8px;
-  color: #0366d6;
+  color: #00afb9;
+  margin-bottom: 5px;
+}
+
+.project-meta {
+  font-size: 0.85em;
+  background: #fdfcdc;
+  padding: 10px;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 10px;
+  border-left: 3px solid #f07167; /* Coral accent line */
 }
 
 a {
-  color: #0366d6;
-  text-decoration: none;
+  color: #0081a7;
+  font-weight: 600;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #f07167; /* Links turn Coral when touched */
 }
 
-/* Responsive fix for mobile */
-@media (max-width: 600px) {
-  .top-section {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
+/* Fix for the lists */
+ul li {
+  margin-bottom: 8px;
 }
 </style>
 
