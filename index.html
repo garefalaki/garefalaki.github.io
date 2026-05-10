@@ -48,6 +48,24 @@ h2 {
   padding-bottom: 6px;
 }
 
+/* Styles for the new Project section */
+.project {
+  margin-bottom: 40px;
+}
+
+.project h3 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.project-meta {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #666;
+  display: block;
+  margin-bottom: 10px;
+}
+
 a {
   color: #0366d6;
   text-decoration: none;
@@ -81,7 +99,7 @@ ul {
     <p>
       <a href="Garefalaki_CV_2026.pdf">CV</a><br>
       <a href="https://github.com/garefalaki">GitHub</a><br>
-      <a href="https://https://scholar.google.com/citations?user=v0IdTwIAAAAJ&hl=el">Google Scholar</a>
+      <a href="https://scholar.google.com/citations?user=v0IdTwIAAAAJ&hl=el">Google Scholar</a>
     </p>
   </div>
 
@@ -94,21 +112,42 @@ ul {
   </p>
 </div>
 
-<div class="section" id="research">
-  <h2>Research</h2>
-  <ul>
-    <li>    Epigenetics & DNA methylation</li>
-    <li>Quantitative genetics</li>
-    <li>Evolutionary biology</li>
-    <li>Statistical genomics/modeling</li>
-    <li>NGS / sequencing data analysis</li>
-    <li>Bioinformatics pipeline development</li>
+<div class="section" id="projects">
+  <h2>Research Projects</h2>
 
+  <div class="project">
+    <h3>Epigenetic heritability in wild bird populations</h3>
+    <span class="project-meta">Keywords: Quantitative Genetics, DNA Methylation, Parus major</span>
+    <p>
+      This project investigates to what extent DNA methylation patterns are passed from parents to offspring in wild great tit populations. By utilizing pedigree data and bisulfite sequencing, I quantify the heritability of epigenetic markers and their contribution to phenotypic variance independently of genetic variation.
+    </p>
+  </div>
 
-Bioinformatics pipeline development
-  </ul>
+  <div class="project">
+    <h3>DNA methylation repeatability framework</h3>
+    <span class="project-meta">Keywords: Statistical Modeling, Biostatistics, R</span>
+    <p>
+      I developed a robust statistical framework to distinguish biological "noise" from stable epigenetic signals. By analyzing longitudinal samples from the same individuals, this work establishes how much of the observed methylation variation is consistent over time, which is a prerequisite for studying adaptive epigenetic responses.
+    </p>
+  </div>
+
+  <div class="project">
+    <h3>Multi-omics analysis of vaccine response</h3>
+    <span class="project-meta">Keywords: Bioinformatics, Transcriptomics, Integration</span>
+    <p>
+      Integrating transcriptomic and methylomic data, this project explores the molecular mechanisms underlying individual variation in vaccine efficacy. We look for specific epigenetic "signatures" that predict how strongly an immune system will react to a stimulus.
+    </p>
+  </div>
+
+  <div class="project">
+    <h3>Adaptive evolution around transposable elements</h3>
+    <span class="project-meta">Keywords: Evolutionary Genomics, TEs, Population Genetics</span>
+    <p>
+      Transposable elements (TEs) are often silenced by methylation. This project examines how TE insertions influence nearby gene expression and whether the resulting epigenetic changes provide a "fast-track" for populations to adapt to new environmental pressures.
+    </p>
+  </div>
+
 </div>
-
 
 <div class="section" id="contact">
   <h2>Contact</h2>
