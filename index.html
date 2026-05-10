@@ -12,33 +12,31 @@ body {
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   line-height: 1.7;
-  color: #2b2d42; 
-  /* Using the Peach color for the main page background */
-  background: #fed9b7; 
+  /* Main Background: #F1F0EA (Light Bone) */
+  background: #f1f0ea; 
+  /* Main Text: #2D232E (Deep Eggplant/Black) */
+  color: #2d232e; 
 }
 
 .section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  /* Using the Light Sand color for the content cards */
-  background: #fdfcdc; 
-  margin-bottom: 25px;
-  border-radius: 15px;
-  /* Darker shadow to help the cards pop off the peach background */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06); 
-  border: 1px solid rgba(0, 129, 167, 0.1); /* Subtle teal border */
+  padding: 50px 30px;
+  max-width: 850px;
+  margin: 0 auto 30px auto;
+  /* Card Background: #E0DDCF (Soft Grey-Sand) */
+  background: #e0ddcf; 
+  border-radius: 8px;
+  /* Using #474448 for a very subtle shadow */
+  box-shadow: 0 4px 20px rgba(71, 68, 72, 0.1);
 }
 
-/* --- Top Section remains transparent to blend with the header area --- */
+/* --- Top Section --- */
 .top-section {
   display: flex;
   gap: 50px;
   align-items: center;
-  padding-top: 60px;
-  background: transparent; 
+  padding-top: 80px;
+  background: transparent;
   box-shadow: none;
-  border: none;
 }
 
 .top-section img {
@@ -47,85 +45,98 @@ body {
   object-fit: cover;
   object-position: 50% 20%; 
   border-radius: 50%;
-  /* Teal border from your palette */
-  border: 5px solid #00afb9; 
+  /* Border: #534B52 (Muted Purple-Grey) */
+  border: 4px solid #534b52; 
 }
 
 .top-section .intro h1 {
   margin: 0;
   font-size: 42px;
   font-weight: 800;
-  color: #0081a7; /* Deep Teal */
+  /* Name: #2D232E */
+  color: #2d232e;
 }
 
 .subtitle {
   font-size: 1.1em;
-  color: #f07167; /* Coral */
+  /* Subtitle: #534B52 */
+  color: #534b52; 
   font-weight: 600;
 }
 
 /* --- Buttons --- */
+.links-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .btn {
-  padding: 10px 20px;
-  /* Using Teal for the buttons now to stand out against the sand/peach */
-  background: #0081a7; 
-  border: none;
-  border-radius: 25px;
+  padding: 10px 22px;
+  /* Button: #474448 (Charcoal) */
+  background: #474448; 
+  border-radius: 4px;
   font-size: 14px;
-  font-weight: 600;
-  color: #ffffff !important; 
-  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #f1f0ea !important; /* Bone text */
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
-  background: #00afb9; 
-  transform: translateY(-2px);
+  /* Hover: #2D232E (Deepest Dark) */
+  background: #2d232e;
+  transform: translateY(-1px);
 }
 
 h2 {
   margin-top: 0;
-  font-size: 26px;
-  color: #0081a7;
-  /* Coral underline for headers */
-  border-bottom: 3px solid #f07167; 
-  padding-bottom: 8px;
+  font-size: 24px;
+  color: #2d232e;
+  /* Accent line: #534B52 */
+  border-bottom: 2px solid #534b52; 
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .project h3 {
-  color: #0081a7;
+  color: #2d232e;
   margin-bottom: 5px;
 }
 
 .project-meta {
   font-size: 0.85em;
-  /* Slightly darker peach for the meta info boxes */
-  background: #fed9b7; 
+  /* Meta background: #F1F0EA */
+  background: #f1f0ea; 
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 4px;
   display: block;
   margin-bottom: 15px;
-  border-left: 4px solid #00afb9; /* Teal accent line */
+  border-left: 4px solid #534b52;
+  color: #474448;
 }
 
 a {
-  color: #0081a7;
+  color: #534b52;
   font-weight: 600;
 }
 
 a:hover {
-  color: #f07167;
+  color: #2d232e;
+  text-decoration: underline;
 }
 
-/* List styling */
-ul {
-  padding-left: 20px;
-}
-
-ul li::marker {
-  color: #f07167; /* Coral bullet points */
+/* Responsive Fixes */
+@media (max-width: 600px) {
+  .top-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+  }
 }
 </style>
-
 </head>
 <body>
 
