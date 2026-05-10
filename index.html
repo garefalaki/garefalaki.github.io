@@ -72,22 +72,29 @@ body {
   flex-wrap: wrap;
 }
 
+/* --- Updated Whitish Buttons --- */
 .btn {
   padding: 10px 22px;
-  /* Button: #474448 (Charcoal) */
-  background: #474448; 
-  border-radius: 4px;
+  /* Using #F1F0EA (Bone) for that whitish look */
+  background: #f1f0ea; 
+  /* Rounded corners (20px) to keep the shape you liked */
+  border-radius: 20px; 
   font-size: 14px;
-  font-weight: 500;
-  color: #f1f0ea !important; /* Bone text */
+  font-weight: 600;
+  /* Text color: #2D232E (Deep Eggplant) for contrast */
+  color: #2d232e !important; 
   text-decoration: none;
-  transition: all 0.2s ease;
+  border: 1px solid #e0ddcf; /* Subtle border so it doesn't disappear */
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .btn:hover {
-  /* Hover: #2D232E (Deepest Dark) */
-  background: #2d232e;
-  transform: translateY(-1px);
+  /* On hover, it turns slightly darker/greyer from your palette */
+  background: #e0ddcf; 
+  border-color: #534b52;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(45, 35, 46, 0.1);
 }
 
 h2 {
