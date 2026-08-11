@@ -4,76 +4,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Blog | Ioanna Garefalaki</title>
 
   <style>
+    :root {
+      --background: #f1f0ea;
+      --card: #e8e8e4;
+      --text: #2d232e;
+      --muted: #6f686f;
+      --accent: #534b52;
+      --border: #d5d2cd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 0;
+      background: var(--background);
+      color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       line-height: 1.7;
-      background: #f1f0ea;
-      color: #2d232e;
     }
 
-    .section {
-      max-width: 850px;
-      margin: 60px auto;
-      padding: 50px 30px;
-      background: #e8e8e4;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(71, 68, 72, 0.1);
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 70px 28px 100px;
     }
 
-    h1 {
-      font-size: 42px;
-      margin-top: 0;
-      margin-bottom: 40px;
-    }
-
-    .post {
-      padding: 25px 0;
-      border-bottom: 1px solid #cbc8c4;
-    }
-
-    .post h2 {
-      margin: 0 0 10px 0;
-      font-size: 25px;
-    }
-
-    .post p {
-      margin-bottom: 15px;
-    }
-
-    a {
-      color: #534b52;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #2d232e;
-      text-decoration: underline;
-    }
+    /* ---------- navigation ---------- */
 
     .back {
       display: inline-block;
-      margin-bottom: 30px;
+      margin-bottom: 55px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.2px;
+    }
+
+    .back:hover {
+      color: var(--text);
+    }
+
+    /* ---------- header ---------- */
+
+    .blog-header {
+      margin-bottom: 55px;
+      max-width: 680px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(46px, 7vw, 72px);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+    }
+
+    .intro {
+      margin-top: 20px;
+      max-width: 600px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ---------- posts ---------- */
+
+    .posts {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .post {
+      position: relative;
+      padding: 32px 34px;
+      background: var(--card);
+      border: 1px solid transparent;
+      border-radius: 10px;
+      box-shadow: 0 5px 22px rgba(45, 35, 46, 0.06);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .post:hover {
+      transform: translateY(-3px);
+      border-color: var(--border);
+      box-shadow: 0 10px 28px rgba(45, 35, 46, 0.10);
+    }
+
+    .post-meta {
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .post h2 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .post h2 a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .post h2 a:hover {
+      color: var(--accent);
+    }
+
+    .post p {
+      max-width: 650px;
+      margin: 0 0 22px;
+      color: #474448;
+      font-size: 16px;
     }
 
     .read-more {
-      font-size: 0.95em;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: gap 0.2s ease;
     }
 
-    @media (max-width: 700px) {
-      .section {
-        margin: 0;
-        padding: 35px 22px;
-        border-radius: 0;
+    .read-more:hover {
+      gap: 11px;
+      color: var(--text);
+    }
+
+    /* Make the whole card clickable without changing appearance */
+    .card-link {
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+    }
+
+    /* ---------- footer ---------- */
+
+    footer {
+      margin-top: 65px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ---------- mobile ---------- */
+
+    @media (max-width: 650px) {
+      .page {
+        padding: 40px 20px 70px;
+      }
+
+      .back {
+        margin-bottom: 40px;
+      }
+
+      .blog-header {
+        margin-bottom: 40px;
       }
 
       h1 {
-        font-size: 34px;
+        font-size: 48px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      .post {
+        padding: 26px 24px;
+      }
+
+      .post h2 {
+        font-size: 25px;
       }
     }
   </style>
@@ -81,30 +213,52 @@
 
 <body>
 
-  <main class="section">
+  <main class="page">
 
     <a href="../" class="back">← Ioanna Garefalaki</a>
 
-    <h1>Blog</h1>
+    <header class="blog-header">
 
-    <article class="post">
+      <p class="eyebrow">Science · Evolution · Nature</p>
 
-      <h2>
-        <a href="flamingos/">Flamingo Smile</a>
-      </h2>
+      <h1>Blog</h1>
 
-      <p>
-        Πώς η ιδιαίτερη μορφολογία του ράμφους των φλαμίνγκο
-        συνδέεται με τον τρόπο διατροφής τους.
+      <p class="intro">
+        Μικρές ιστορίες για την εξέλιξη, τη βιολογία και όλα εκείνα
+        τα περίεργα πράγματα που κάνει η φύση.
       </p>
 
-      <a href="flamingos/" class="read-more">
-        Διάβασε το άρθρο →
-      </a>
+    </header>
 
-    </article>
+    <section class="posts">
+
+      <article class="post">
+
+        <div class="post-meta">
+          Evolution notes
+        </div>
+
+        <h2>
+          <a href="flamingos/">Flamingo Smile</a>
+        </h2>
+
+        <p>
+          Πώς η ιδιαίτερη μορφολογία του ράμφους των φλαμίνγκο
+          συνδέεται με τον τρόπο διατροφής τους.
+        </p>
+
+  
+
+      </article>
+
+    </section>
+
+    <footer>
+      © Ioanna Garefalaki · Notes on biology, evolution and science.
+    </footer>
 
   </main>
 
 </body>
+
 </html>
