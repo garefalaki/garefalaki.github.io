@@ -1,28 +1,110 @@
 <!DOCTYPE html>
 <html lang="el">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog | Ioanna Garefalaki</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+      background: #f1f0ea;
+      color: #2d232e;
+    }
+
+    .section {
+      max-width: 850px;
+      margin: 60px auto;
+      padding: 50px 30px;
+      background: #e8e8e4;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(71, 68, 72, 0.1);
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+
+    .post {
+      padding: 25px 0;
+      border-bottom: 1px solid #cbc8c4;
+    }
+
+    .post h2 {
+      margin: 0 0 10px 0;
+      font-size: 25px;
+    }
+
+    .post p {
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #534b52;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #2d232e;
+      text-decoration: underline;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .read-more {
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 700px) {
+      .section {
+        margin: 0;
+        padding: 35px 22px;
+        border-radius: 0;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <h1>Blog</h1>
+  <main class="section">
 
-  <article>
-    <h2>
-      <a href="flamingos/">Flamingo smile</a>
-    </h2>
+    <a href="../" class="back">← Ioanna Garefalaki</a>
 
-    <p>
-      Πώς η ιδιαίτερη μορφολογία του ράμφους των φλαμίνγκο συνδέεται
-      με τον τρόπο διατροφής τους.
-    </p>
+    <h1>Blog</h1>
 
-    <a href="flamingos/">Διάβασε το άρθρο →</a>
-  </article>
+    <article class="post">
+
+      <h2>
+        <a href="flamingos/">Flamingo Smile</a>
+      </h2>
+
+      <p>
+        Πώς η ιδιαίτερη μορφολογία του ράμφους των φλαμίνγκο
+        συνδέεται με τον τρόπο διατροφής τους.
+      </p>
+
+      <a href="flamingos/" class="read-more">
+        Διάβασε το άρθρο →
+      </a>
+
+    </article>
+
+  </main>
 
 </body>
 </html>
-
