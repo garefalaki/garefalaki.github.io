@@ -39,6 +39,15 @@ h1{font-family:Georgia,"Times New Roman",serif;font-size:62px;line-height:1.02;l
 .button{display:inline-block;text-decoration:none;padding:10px 15px;border:1px solid var(--line);border-radius:12px;background:var(--surface);font-size:14px;font-weight:700;transition:.18s ease}
 .button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,20,20,.08)}
 .button.primary{background:var(--text);color:white;border-color:var(--text)}
+.hero-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:52px}
+.hero-highlight{display:block;text-decoration:none;padding:22px 22px 20px;border:1px solid var(--line);border-radius:20px;background:var(--surface);transition:.2s ease;min-height:170px}
+.hero-highlight:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.hero-highlight:nth-child(1){background:var(--accent-soft)}
+.hero-highlight:nth-child(2){background:var(--peach)}
+.hero-highlight:nth-child(3){background:var(--mint)}
+.hero-highlight .emoji{display:block;font-size:34px;line-height:1;margin-bottom:24px}
+.hero-highlight h3{margin:0 0 7px;font-size:20px;line-height:1.2}
+.hero-highlight p{margin:0;font-size:14px;line-height:1.5;color:var(--muted)}
 section{padding:72px 0;border-top:1px solid var(--line)}
 .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}
 h2{font-family:Georgia,"Times New Roman",serif;font-size:38px;line-height:1.1;margin:0;font-weight:500;letter-spacing:-.02em}
@@ -78,8 +87,9 @@ footer{padding:42px 0 70px;border-top:1px solid var(--line);color:var(--muted);f
   .hero{padding-top:56px}
   .hero img{width:180px;height:180px}
   h1{font-size:48px}
-  .grid,.feature-strip{grid-template-columns:1fr}
+  .grid,.feature-strip,.hero-highlights{grid-template-columns:1fr}
   .section-head{display:block}.section-note{text-align:left;margin-top:10px}
+  .hero-highlight{min-height:auto}
 }
 @media(max-width:640px){
   .nav-inner{align-items:flex-start;flex-direction:column;gap:10px}
@@ -120,6 +130,24 @@ footer{padding:42px 0 70px;border-top:1px solid var(--line);color:var(--muted);f
           <a class="button" href="mailto:igarefalaki1390@gmail.com">Email</a>
         </div>
       </div>
+    </div>
+
+    <div class="hero-highlights" aria-label="Main highlights">
+      <a class="hero-highlight" href="#research">
+        <span class="emoji" aria-hidden="true">🧬</span>
+        <h3>My PhD project</h3>
+        <p>Evolutionary epigenetics, DNA methylation repeatability, quantitative genetics and computational genomics.</p>
+      </a>
+      <a class="hero-highlight" href="writing/">
+        <span class="emoji" aria-hidden="true">✍️</span>
+        <h3>Writing</h3>
+        <p>Popular science, essays and ideas across biology, evolution, AI, biodiversity and research culture.</p>
+      </a>
+      <a class="hero-highlight" href="events/">
+        <span class="emoji" aria-hidden="true">🔭</span>
+        <h3>Outreach &amp; events</h3>
+        <p>Science festivals, talks, astronomy, fieldwork, public engagement and hands-on science.</p>
+      </a>
     </div>
   </div>
 
