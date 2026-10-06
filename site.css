@@ -27,6 +27,7 @@ a:hover{color:#9e164b;text-decoration:none}
 .site-links a:hover::after,.site-links a.active::after{right:0}
 
 .page-shell{max-width:860px;margin:0 auto;padding:38px 28px 90px}
+.about-shell{padding-top:92px}
 .home-shell{max-width:980px;margin:0 auto;padding:54px 28px 96px;text-align:center}
 .profile-photo{display:none}
 h1,h2,h3,h4,h5,h6{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;color:#333;font-weight:800;line-height:1.15}
@@ -92,6 +93,6 @@ p{margin:0 0 20px}
 footer{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;border-top:1px solid var(--line);color:var(--muted);text-align:center;padding:28px;font-size:12px;background:#fff}
 
 @media(max-width:900px){.cv-list{grid-template-columns:1fr}.skill-row{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:800px){.quick-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.site-nav-inner{align-items:flex-start;flex-direction:column;padding:16px 20px}.site-links{gap:15px;justify-content:flex-start;margin-left:0}.site-nav{margin-bottom:64px}.site-nav::after{left:50%;width:100px;height:100px;bottom:-51px}.home-shell h1{font-size:50px}}
+@media(max-width:800px){.quick-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.site-nav-inner{align-items:flex-start;flex-direction:column;padding:16px 20px}.site-links{gap:15px;justify-content:flex-start;margin-left:0}.site-nav{margin-bottom:64px}.site-nav::after{left:50%;width:100px;height:100px;bottom:-51px}.home-shell h1{font-size:50px}.about-shell{padding-top:76px}}
 @media(max-width:620px){.cv-entry{grid-template-columns:1fr;gap:5px}.cv-date{padding-top:0}.cv-section{padding:24px 20px}.skill-row{grid-template-columns:repeat(2,minmax(0,1fr))}.cv-shell .page-title h1{font-size:38px}}
-@media(max-width:520px){.quick-links{grid-template-columns:1fr}.home-shell,.page-shell{padding:34px 20px 70px}h1{font-size:33px}.home-shell h1{font-size:42px}.page-title{padding:20px 18px;border-radius:13px}.content-card{padding:21px 19px}.site-nav::after{width:92px;height:92px;bottom:-47px}.site-nav{margin-bottom:58px}.skill-row{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.quick-links{grid-template-columns:1fr}.home-shell,.page-shell{padding:34px 20px 70px}.about-shell{padding-top:72px}h1{font-size:33px}.home-shell h1{font-size:42px}.page-title{padding:20px 18px;border-radius:13px}.content-card{padding:21px 19px}.site-nav::after{width:92px;height:92px;bottom:-47px}.site-nav{margin-bottom:58px}.skill-row{grid-template-columns:1fr 1fr}}
