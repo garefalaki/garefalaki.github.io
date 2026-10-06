@@ -99,6 +99,26 @@ footer{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;borde
 
 @media(max-width:1100px){.site-nav-inner{padding-left:250px}.site-links{gap:24px}.site-links a{font-size:13px;letter-spacing:.055em}.site-nav::after,.site-brand{left:125px}}
 @media(max-width:900px){.cv-list{grid-template-columns:1fr}.site-nav-inner{padding-left:210px}.site-links{gap:18px}.site-nav::after,.site-brand{left:105px}}
-@media(max-width:800px){.quick-links{grid-template-columns:1fr;max-width:470px;gap:16px}.site-nav-inner{align-items:flex-start;flex-direction:column;padding:16px 20px}.site-links{gap:15px;justify-content:flex-start;margin-left:0}.site-nav{margin-bottom:96px}.site-nav::after,.site-brand{left:50%;width:100px;height:100px;bottom:-51px}.home-shell h1{font-size:50px}.about-shell{padding-top:76px}}
+@media(max-width:800px){
+  .quick-links{grid-template-columns:1fr;max-width:470px;gap:16px}
+  .site-nav-inner{display:block;padding:16px 14px 15px;min-height:0}
+  .site-links{display:flex;justify-content:center;align-items:center;gap:10px 18px;row-gap:12px;flex-wrap:wrap;width:100%;margin:0 auto}
+  .site-links a{font-size:12px;letter-spacing:.055em;padding-bottom:3px}
+  .site-nav{margin-bottom:122px;min-height:0}
+  .site-nav::after,.site-brand{left:50%;width:100px;height:100px;bottom:-102px}
+  .home-shell h1{font-size:50px}
+  .about-shell{padding-top:24px}
+}
 @media(max-width:620px){.cv-entry{grid-template-columns:1fr;gap:3px}.cv-date{padding-top:0}.cv-section{padding:14px 13px}.cv-shell .page-title h1{font-size:34px}}
-@media(max-width:520px){.home-shell,.page-shell{padding:34px 20px 70px}.about-shell{padding-top:72px}h1{font-size:33px}.home-shell h1{font-size:42px}.page-title{padding:20px 18px;border-radius:13px}.content-card{padding:21px 19px}.site-nav::after,.site-brand{width:92px;height:92px;bottom:-47px}.site-nav{margin-bottom:92px}}
+@media(max-width:520px){
+  .home-shell,.page-shell{padding:20px 20px 70px}
+  .about-shell{padding-top:18px}
+  h1{font-size:33px}
+  .home-shell h1{font-size:42px}
+  .page-title{padding:20px 18px;border-radius:13px}
+  .content-card{padding:21px 19px}
+  .site-links{gap:9px 14px;row-gap:10px}
+  .site-links a{font-size:11px;letter-spacing:.045em}
+  .site-nav::after,.site-brand{width:92px;height:92px;bottom:-94px}
+  .site-nav{margin-bottom:112px}
+}
