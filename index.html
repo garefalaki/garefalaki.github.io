@@ -26,16 +26,16 @@ h3{margin:28px 0 10px;color:var(--text);font-size:19px}
 .chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
 .chip{background:var(--bg);padding:6px 11px;border-radius:15px;font-size:13px}
 .education,.project-list,.outreach,.category-list{list-style:none;padding:0;margin:0}
-.education li,.outreach li{margin:0 0 17px}
-.category-list li{margin:0 0 17px;font-size:1rem;line-height:1.7}
+.education li,.outreach li,.category-list li{margin:0 0 17px}
 .project{margin-bottom:27px}
 .project:last-child{margin-bottom:0}
 .project h3{margin:0 0 5px;font-size:19px}
 .meta{font-size:13px;color:var(--muted);margin-bottom:7px}
-.category-group{margin-top:30px}
+.category-group{margin-top:26px}
 .category-group:first-of-type{margin-top:0}
-.category-group h3{margin:0 0 17px;font-family:inherit;font-size:1rem;font-weight:700;letter-spacing:0;line-height:1.7}
-.category-list a{color:var(--text);font-weight:inherit;text-decoration:none}
+.category-label{margin:0 0 17px;font-size:1rem;line-height:1.7;color:var(--text)}
+.category-list li{font-size:1rem;line-height:1.7;color:var(--text)}
+.category-list a{color:var(--text);font-weight:400;text-decoration:none}
 .category-list a:hover{color:var(--text);text-decoration:underline}
 .category-list strong{font-weight:700}
 .more-link{display:inline-block;margin-top:16px}
@@ -119,7 +119,7 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
 <section class="section" id="activities">
   <h2>Events &amp; Activities</h2>
   <div class="category-group">
-    <h3>Public Engagement</h3>
+    <p class="category-label"><strong>Public Engagement</strong></p>
     <ul class="category-list">
       <li><a href="events/soapbox-science-2026/"><strong>Soapbox Science Munich</strong></a> · 2026 · Featured speaker</li>
       <li><a href="events/researchers-night/"><strong>Researchers' Night Greece</strong></a> · 2017 · Exhibitor &amp; presenter</li>
@@ -130,33 +130,33 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
     </ul>
   </div>
   <div class="category-group">
-    <h3>Scientific Communication</h3>
+    <p class="category-label"><strong>Scientific Communication</strong></p>
     <ul class="category-list">
       <li><a href="events/smbe-2026/"><strong>SMBE 2026</strong></a> · Poster presentation · Copenhagen</li>
       <li><a href="events/evogen-2026/"><strong>EvoGen Munich</strong></a> · Scientific talk · Munich</li>
     </ul>
   </div>
   <div class="category-group">
-    <h3>Interviews</h3>
+    <p class="category-label"><strong>Interviews</strong></p>
     <ul class="category-list">
       <li><strong>LMU Gateway Community Interview</strong> · LMU Munich</li>
       <li><a href="https://munichsoapboxscience.com/soapbox-science-2026/6/" target="_blank" rel="noopener noreferrer"><strong>Soapbox Science Munich Interview</strong></a> · 2026</li>
     </ul>
   </div>
   <div class="category-group">
-    <h3>Writing &amp; Creative Practice</h3>
+    <p class="category-label"><strong>Writing &amp; Creative Practice</strong></p>
     <ul class="category-list">
       <li><a href="events/munich-readery-writing/"><strong>Creative Writing at The Munich Readery</strong></a> · Workshops and community writing · Munich</li>
     </ul>
   </div>
   <div class="category-group">
-    <h3>Fieldwork &amp; Laboratory Experience</h3>
+    <p class="category-label"><strong>Fieldwork &amp; Laboratory Experience</strong></p>
     <ul class="category-list">
       <li><a href="events/fieldwork-lab/"><strong>Fieldwork &amp; Laboratory Experience</strong></a> · Greek fauna, collaborative fieldwork, bird fieldwork, ptarmigan sampling and molecular biology laboratory work</li>
     </ul>
   </div>
   <div class="category-group">
-    <h3>Community &amp; Wildlife</h3>
+    <p class="category-label"><strong>Community &amp; Wildlife</strong></p>
     <ul class="category-list">
       <li><a href="events/anima/"><strong>ANIMA, Hellenic Wildlife Care Association</strong></a> · 2020–2021 · Transport &amp; rescue volunteer</li>
     </ul>
