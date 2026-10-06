@@ -21,9 +21,9 @@ h2{margin:42px 0 18px;font-size:21px;border-bottom:2px solid var(--accent);paddi
 .event-link{display:block;text-decoration:none;color:inherit} /* Make the full event card clickable */
 .event-card{height:100%;background:var(--card);border:1px solid var(--border);border-radius:9px;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease} /* Style each event card */
 .event-link:hover .event-card{transform:translateY(-3px);box-shadow:0 8px 24px rgba(71,68,72,.13);border-color:var(--accent)} /* Indicate clickable cards on hover */
-.event-card img{width:100%;height:230px;object-fit:cover;display:block} /* Standardise card images */
-.event-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:4px} /* Allow two preview photographs per card */
-.event-gallery img{height:185px} /* Standardise paired preview image height */
+.event-card img{width:100%;height:auto;object-fit:contain;display:block;background:var(--bg)} /* Show complete images without cropping */
+.event-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;align-items:start} /* Allow two preview photographs per card */
+.event-gallery img{height:auto} /* Preserve each image's original aspect ratio */
 .event-content{padding:18px} /* Add space around card text */
 .event-content h3{margin:0 0 4px;font-size:19px} /* Style event names */
 .meta{font-size:13px;color:var(--muted);margin-bottom:8px} /* Style event metadata */
@@ -31,7 +31,7 @@ h2{margin:42px 0 18px;font-size:21px;border-bottom:2px solid var(--accent);paddi
 .more{display:inline-block;margin-top:11px;color:var(--accent);font-size:13px;font-weight:700} /* Style the view-event prompt */
 footer{margin-top:55px;color:var(--muted);font-size:13px} /* Style the footer */
 
-@media(max-width:650px){main{padding:35px 18px 60px}h1{font-size:36px}.event-grid{grid-template-columns:1fr}.event-card img{height:220px}.event-gallery img{height:165px}} /* Make the archive mobile friendly */
+@media(max-width:650px){main{padding:35px 18px 60px}h1{font-size:36px}.event-grid{grid-template-columns:1fr}.event-gallery{grid-template-columns:1fr}.event-card img,.event-gallery img{height:auto}} /* Make the archive mobile friendly */
 </style>
 </head>
 
