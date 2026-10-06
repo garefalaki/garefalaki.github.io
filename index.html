@@ -6,6 +6,7 @@
 <title>Ioanna Garefalaki | Evolutionary Biologist & Science Communicator</title>
 <meta name="description" content="Ioanna Garefalaki, evolutionary biologist, computational genomics researcher, science writer and communicator at LMU Munich and IMPRS-BI.">
 <style>
+  .event-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:28px}.event-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;overflow:hidden}.event-card img{width:100%;height:260px;object-fit:cover;display:block}.event-content{padding:18px}.event-content h3{margin:0 0 4px;font-size:19px}.event-content .meta{margin-bottom:9px}.event-content p{margin:0;font-size:14px;line-height:1.6}.event-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:4px}.event-gallery img{height:190px}@media(max-width:650px){.event-grid{grid-template-columns:1fr}.event-card img{height:230px}.event-gallery img{height:170px}}
 :root{--bg:#f1f0ea;--card:#e8e8e4;--text:#2d232e;--muted:#6f686f;--accent:#534b52;--border:#d5d2cd;--white:#f8f7f2}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.7}a{color:var(--accent);font-weight:600}a:hover{color:var(--text)}.section{padding:46px 30px;max-width:900px;margin:0 auto 28px;background:var(--card);border-radius:9px;box-shadow:0 4px 20px rgba(71,68,72,.08)}.top-section{display:flex;gap:46px;align-items:center;padding-top:72px;background:transparent;box-shadow:none}.top-section img{width:200px;height:200px;object-fit:cover;object-position:50% 20%;border-radius:50%;border:4px solid var(--accent)}h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:46px;font-weight:500;line-height:1.05}.subtitle{font-size:1.08rem;color:var(--accent);font-weight:650;margin:.7rem 0 0}.links-container{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}.btn{padding:9px 18px;background:var(--white);border-radius:22px;font-size:14px;color:var(--text)!important;text-decoration:none;border:1px solid var(--border);transition:.2s}.btn:hover{transform:translateY(-2px);border-color:var(--accent);text-decoration:none}.primary{background:var(--accent);color:white!important}.primary:hover{color:white!important}h2{margin:0 0 22px;font-size:23px;border-bottom:2px solid var(--accent);padding-bottom:9px;text-transform:uppercase;letter-spacing:1px}.lead{font-size:1.05rem;max-width:760px}.chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.chip{background:var(--bg);padding:6px 11px;border-radius:15px;font-size:13px}.education,.project-list,.outreach{list-style:none;padding:0;margin:0}.education li,.outreach li{margin:0 0 17px}.project{margin-bottom:27px}.project:last-child{margin-bottom:0}.project h3{margin:0 0 5px;font-size:19px}.meta{font-size:13px;color:var(--muted);margin-bottom:7px}.writing-callout{background:var(--bg);padding:24px;border-left:4px solid var(--accent);border-radius:5px}.writing-callout h3{margin-top:0;font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:500}.writing-callout p{margin-bottom:18px}footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);font-size:13px}@media(max-width:650px){.section{margin:0 14px 20px;padding:32px 22px}.top-section{flex-direction:column;text-align:center;padding-top:38px}.top-section img{width:170px;height:170px}h1{font-size:39px}.links-container{justify-content:center}}
 </style>
@@ -61,22 +62,70 @@
   </div>
 </section>
 
-<section class="section" id="science-communication">
-  <h2>Science Communication</h2>
-  <div class="writing-callout">
-    <h3>Science Writing &amp; Communication Portfolio</h3>
-    <p>Selected long-form writing, published features and an archive of earlier science communication in Greek and English.</p>
-    <a class="btn primary" href="writing/">Explore my writing →</a>
+<section class="section" id="science-communication"> <!-- Start the science communication section -->
+  <h2>Science Communication</h2> <!-- Section heading -->
+
+  <div class="writing-callout"> <!-- Highlight the separate writing portfolio -->
+    <h3>Science Writing &amp; Communication Portfolio</h3> <!-- Writing portfolio title -->
+    <p>Selected long-form writing, published features and an archive of earlier science communication in Greek and English.</p> <!-- Explain what the writing page contains -->
+    <a class="btn primary" href="writing/">Explore my writing →</a> <!-- Link to the writing portfolio -->
   </div>
-  <ul class="outreach" style="margin-top:26px">
-    <li><strong>Soapbox Science Munich</strong> · Featured speaker, 2026</li>
-    <li><strong>Science Communication Writing Workshop, LMU Munich</strong> · 2026</li>
-    <li><strong>Researchers' Night Greece</strong> · Exhibitor and presenter, 2017 &amp; 2018</li>
-    <li><strong>Patras Science Festival</strong> · Presenter, 2017</li>
-    <li><strong>Astronomy Society of Patras “Orion”</strong> · Public astronomy outreach, 2014–2017</li>
-    <li><strong>Ligi Epistimi na Goustaroume</strong> · Staff writer and editorial co-administrator for a Greek science community with 16,000+ followers in the naive pre-algorithmic times. 2014–2017</li>
-  </ul>
-</section>
+
+  <ul class="outreach" style="margin-top:26px"> <!-- Compact CV-style overview of outreach activities -->
+    <li><strong>Soapbox Science Munich</strong> · Featured speaker, 2026</li> <!-- Public science speaking -->
+    <li><strong>Science Communication Writing Workshop, LMU Munich</strong> · 2026</li> <!-- Science communication training -->
+    <li><strong>Researchers' Night Greece</strong> · Exhibitor and presenter, 2017 &amp; 2018</li> <!-- Public engagement event -->
+    <li><strong>Patras Science Festival</strong> · Presenter, 2017</li> <!-- Science festival -->
+    <li><strong>Astronomy Society of Patras “Orion”</strong> · Public astronomy outreach, 2014–2017</li> <!-- Astronomy outreach -->
+    <li><strong>Ligi Epistimi na Goustaroume</strong> · Staff writer and editorial co-administrator for a Greek science community with 16,000+ followers, 2014–2017</li> <!-- Earlier digital science communication -->
+  </ul> <!-- Close the list before starting the visual portfolio -->
+
+  <div class="event-grid"> <!-- Start the visual archive -->
+
+    <article class="event-card"> <!-- Researchers' Night -->
+      <div class="event-gallery"> <!-- Pair public interaction with the specimens -->
+        <img src="images/researchers-night-2017-public.jpg" alt="Visitors exploring zoological specimens during Researchers' Night in Greece"> <!-- Public engagement photo -->
+        <img src="images/researchers-night-2017-specimens.jpg" alt="Comparative zoology display with mammal skulls during Researchers' Night"> <!-- Specimen display photo -->
+      </div>
+      <div class="event-content"> <!-- Event description -->
+        <h3>Researchers' Night Greece</h3> <!-- Event name -->
+        <div class="meta">2017–2018 · Exhibitor &amp; presenter</div> <!-- Date and role -->
+        <p>Presented biodiversity, evolutionary biology and comparative zoology to the public through hands-on demonstrations using vertebrate specimens, skulls and other biological material.</p> <!-- Description -->
+      </div>
+    </article>
+
+    <article class="event-card"> <!-- Astronomy outreach -->
+      <div class="event-gallery"> <!-- Pair night sky and observing equipment -->
+        <img src="images/parnonas-astronomy-2017-milky-way.jpg" alt="Milky Way above the Parnon astronomy gathering"> <!-- Night-sky image -->
+        <img src="images/parnonas-astronomy-2017-telescope.jpg" alt="Telescopes prepared for astronomical observations at Mount Parnon"> <!-- Telescope image -->
+      </div>
+      <div class="event-content"> <!-- Event description -->
+        <h3>Astronomy Outreach &amp; Parnon Gathering</h3> <!-- Event name -->
+        <div class="meta">2014–2017 · Astronomy Society of Patras “Orion”</div> <!-- Organisation and period -->
+        <p>Participated in public observing sessions, astronomy outreach activities and amateur astronomy gatherings, including observing under the dark skies of Mount Parnon.</p> <!-- Description -->
+      </div>
+    </article>
+
+    <article class="event-card"> <!-- EvoKE -->
+      <img src="images/evoke-2019.jpg" alt="EvoKE 2019 meeting on evolutionary biology communication"> <!-- EvoKE image -->
+      <div class="event-content"> <!-- Event description -->
+        <h3>EvoKE 2019</h3> <!-- Event name -->
+        <div class="meta">2019 · Evolutionary Knowledge for Everyone</div> <!-- Event context -->
+        <p>Participated in an international meeting devoted to evolutionary biology communication, education and the relationship between evolutionary research and society.</p> <!-- Description -->
+      </div>
+    </article>
+
+    <article class="event-card"> <!-- Patras Science Festival -->
+      <img src="images/patras-science-festival-2017.jpg" alt="Interactive biology demonstration at Patras Science Festival"> <!-- Festival image -->
+      <div class="event-content"> <!-- Event description -->
+        <h3>Patras Science Festival</h3> <!-- Event name -->
+        <div class="meta">2017 · Presenter</div> <!-- Date and role -->
+        <p>Contributed to interactive biology activities for the general public, using demonstrations and biological material to communicate scientific concepts outside the classroom.</p> <!-- Description -->
+      </div>
+    </article>
+
+  </div> <!-- End visual archive -->
+</section> <!-- End science communication section -->
 
 <footer>© Ioanna Garefalaki · Evolutionary biology, genomics and science communication.</footer>
 </body>
