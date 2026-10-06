@@ -25,19 +25,15 @@ h3{margin:28px 0 10px;color:var(--text);font-size:19px}
 .lead{font-size:1.05rem;max-width:760px}
 .chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
 .chip{background:var(--bg);padding:6px 11px;border-radius:15px;font-size:13px}
-.education,.project-list,.outreach,.category-list{list-style:none;padding:0;margin:0}
-.education li,.outreach li,.category-list li{margin:0 0 17px}
-.project{margin-bottom:27px}
-.project:last-child{margin-bottom:0}
-.project h3{margin:0 0 5px;font-size:19px}
+.education,.project-list,.outreach{list-style:none;padding:0;margin:0}
+.education li,.outreach li{margin:0 0 17px}
+.project,.activity{margin-bottom:27px}
+.project:last-child,.activity:last-child{margin-bottom:0}
+.project h3,.activity h3{margin:0 0 5px;font-size:19px}
+.activity h3 a{color:var(--text);font-weight:700;text-decoration:none}
+.activity h3 a:hover{text-decoration:underline}
 .meta{font-size:13px;color:var(--muted);margin-bottom:7px}
-.category-group{margin-top:26px}
-.category-group:first-of-type{margin-top:0}
-.category-label{margin:0 0 17px;font-size:1rem;line-height:1.7;color:var(--text)}
-.category-list li{font-size:1rem;line-height:1.7;color:var(--text)}
-.category-list a{color:var(--text);font-weight:400;text-decoration:none}
-.category-list a:hover{color:var(--text);text-decoration:underline}
-.category-list strong{font-weight:700}
+.activity p{margin:0}
 .more-link{display:inline-block;margin-top:16px}
 footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);font-size:13px}
 @media(max-width:650px){
@@ -118,49 +114,85 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
 </section>
 <section class="section" id="activities">
   <h2>Events &amp; Activities</h2>
-  <div class="category-group">
-    <p class="category-label"><strong>Public Engagement</strong></p>
-    <ul class="category-list">
-      <li><a href="events/soapbox-science-2026/"><strong>Soapbox Science Munich</strong></a> · 2026 · Featured speaker</li>
-      <li><a href="events/researchers-night/"><strong>Researchers' Night Greece</strong></a> · 2017 · Exhibitor &amp; presenter</li>
-      <li><a href="events/patras-science-festival/"><strong>Patras Science Festival</strong></a> · 2016 · Presenter</li>
-      <li><a href="events/astronomy-orion/"><strong>Astronomy Society of Patras “Orion”</strong></a> · 2014–2017 · Public astronomy outreach</li>
-      <li><a href="events/parnonas-2017/"><strong>10th National Gathering of Amateur Astronomers</strong></a> · 2017 · Event volunteer</li>
-      <li><a href="events/evoke-2019/"><strong>EvoKE 2019</strong></a> · Split, Croatia</li>
-    </ul>
+
+  <div class="activity">
+    <h3><a href="events/soapbox-science-2026/">Soapbox Science Munich</a></h3>
+    <div class="meta">Public Engagement · 2026 · Featured speaker · Munich, Germany</div>
+    <p>Interactive public communication of evolutionary biology, genetics, epigenetics and DNA methylation using props and live demonstrations.</p>
   </div>
-  <div class="category-group">
-    <p class="category-label"><strong>Scientific Communication</strong></p>
-    <ul class="category-list">
-      <li><a href="events/smbe-2026/"><strong>SMBE 2026</strong></a> · Poster presentation · Copenhagen</li>
-      <li><a href="events/evogen-2026/"><strong>EvoGen Munich</strong></a> · Scientific talk · Munich</li>
-    </ul>
+
+  <div class="activity">
+    <h3><a href="events/researchers-night/">Researchers' Night Greece</a></h3>
+    <div class="meta">Public Engagement · 2017 · Exhibitor &amp; presenter · Patras, Greece</div>
+    <p>Hands-on public engagement around biology, molecular biology, genetics, evolution and biodiversity.</p>
   </div>
-  <div class="category-group">
-    <p class="category-label"><strong>Interviews</strong></p>
-    <ul class="category-list">
-      <li><strong>LMU Gateway Community Interview</strong> · LMU Munich</li>
-      <li><a href="https://munichsoapboxscience.com/soapbox-science-2026/6/" target="_blank" rel="noopener noreferrer"><strong>Soapbox Science Munich Interview</strong></a> · 2026</li>
-    </ul>
+
+  <div class="activity">
+    <h3><a href="events/patras-science-festival/">Patras Science Festival</a></h3>
+    <div class="meta">Public Engagement · 2016 · Presenter · Patras, Greece</div>
+    <p>Public-facing biology activities designed to communicate scientific concepts to audiences with different scientific backgrounds.</p>
   </div>
-  <div class="category-group">
-    <p class="category-label"><strong>Writing &amp; Creative Practice</strong></p>
-    <ul class="category-list">
-      <li><a href="events/munich-readery-writing/"><strong>Creative Writing at The Munich Readery</strong></a> · Workshops and community writing · Munich</li>
-    </ul>
+
+  <div class="activity">
+    <h3><a href="events/astronomy-orion/">Astronomy Society of Patras “Orion”</a></h3>
+    <div class="meta">Public Engagement · 2014–2017 · Patras, Greece</div>
+    <p>Public observational events, educational activities and stargazing sessions promoting astronomy and scientific literacy.</p>
   </div>
-  <div class="category-group">
-    <p class="category-label"><strong>Fieldwork &amp; Laboratory Experience</strong></p>
-    <ul class="category-list">
-      <li><a href="events/fieldwork-lab/"><strong>Fieldwork &amp; Laboratory Experience</strong></a> · Greek fauna, collaborative fieldwork, bird fieldwork, ptarmigan sampling and molecular biology laboratory work</li>
-    </ul>
+
+  <div class="activity">
+    <h3><a href="events/parnonas-2017/">10th National Gathering of Amateur Astronomers</a></h3>
+    <div class="meta">Public Engagement · 2017 · Event volunteer · Mount Parnon, Greece</div>
+    <p>Supported the organisation and public engagement activities of the national amateur astronomy gathering.</p>
   </div>
-  <div class="category-group">
-    <p class="category-label"><strong>Community &amp; Wildlife</strong></p>
-    <ul class="category-list">
-      <li><a href="events/anima/"><strong>ANIMA, Hellenic Wildlife Care Association</strong></a> · 2020–2021 · Transport &amp; rescue volunteer</li>
-    </ul>
+
+  <div class="activity">
+    <h3><a href="events/evoke-2019/">EvoKE 2019</a></h3>
+    <div class="meta">Public Engagement · 2019 · Split, Croatia</div>
+    <p>International meeting focused on evolutionary biology communication, education and engagement between science and society.</p>
   </div>
+
+  <div class="activity">
+    <h3><a href="events/smbe-2026/">SMBE 2026</a></h3>
+    <div class="meta">Scientific Communication · 2026 · Poster presentation · Copenhagen, Denmark</div>
+    <p>Presented “A statistical framework for DNA methylation repeatability in natural populations” at the Society for Molecular Biology &amp; Evolution annual meeting.</p>
+  </div>
+
+  <div class="activity">
+    <h3><a href="events/evogen-2026/">EvoGen Munich</a></h3>
+    <div class="meta">Scientific Communication · 2026 · Scientific talk · Munich, Germany</div>
+    <p>Presented research on the technical repeatability of DNA methylation in two wild avian species.</p>
+  </div>
+
+  <div class="activity">
+    <h3>LMU Gateway Community Interview</h3>
+    <div class="meta">Interview · LMU Munich</div>
+    <p>Interview for the LMU Gateway newsletter about my experience as an international doctoral candidate at LMU Munich and life during the PhD.</p>
+  </div>
+
+  <div class="activity">
+    <h3><a href="https://munichsoapboxscience.com/soapbox-science-2026/6/" target="_blank" rel="noopener noreferrer">Soapbox Science Munich Interview</a></h3>
+    <div class="meta">Interview · 2026 · Soapbox Science Munich</div>
+    <p>Speaker interview accompanying my participation in Soapbox Science Munich 2026, introducing my research and public engagement work.</p>
+  </div>
+
+  <div class="activity">
+    <h3><a href="events/munich-readery-writing/">Creative Writing at The Munich Readery</a></h3>
+    <div class="meta">Writing &amp; Creative Practice · 2026 · Munich, Germany</div>
+    <p>Creative writing workshops, Write Night sessions, journaling, place-based writing and informal group writing practice.</p>
+  </div>
+
+  <div class="activity">
+    <h3><a href="events/fieldwork-lab/">Fieldwork &amp; Laboratory Experience</a></h3>
+    <div class="meta">Fieldwork &amp; Laboratory · Greece &amp; Germany</div>
+    <p>Greek fauna field courses, collaborative wildlife sampling, blue and great tit fieldwork, ptarmigan sampling on the Zugspitze and molecular biology laboratory work.</p>
+  </div>
+
+  <div class="activity">
+    <h3><a href="events/anima/">ANIMA, Hellenic Wildlife Care Association</a></h3>
+    <div class="meta">Community &amp; Wildlife · 2020–2021 · Transport &amp; rescue volunteer · Greece</div>
+    <p>Supported wildlife rescue and rehabilitation through animal transport and related volunteer activities.</p>
+  </div>
+
   <a class="more-link" href="events/">Open the full events archive →</a>
 </section>
 <section class="section" id="teaching">
