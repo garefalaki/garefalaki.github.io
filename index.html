@@ -19,9 +19,10 @@ h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:46px;font-weig
 .subtitle{font-size:1.08rem;color:var(--accent);font-weight:650;margin:.7rem 0 0} /* Style the professional subtitle */
 .links-container{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap} /* Arrange header links */
 .btn{display:inline-block;padding:9px 18px;background:var(--white);border-radius:22px;font-size:14px;color:var(--text)!important;text-decoration:none;border:1px solid var(--border);transition:.2s} /* Style buttons */
+.links-container .btn{font-weight:400} /* Keep all top navigation buttons the same non-bold weight */
 .btn:hover{transform:translateY(-2px);border-color:var(--accent);text-decoration:none} /* Add button hover behaviour */
-.primary{background:var(--accent);color:white!important} /* Style the main button */
-.primary:hover{color:white!important} /* Keep main button text white */
+.primary{background:var(--accent);color:white!important} /* Style highlighted buttons elsewhere on the page */
+.primary:hover{color:white!important} /* Keep highlighted button text white */
 h2{margin:0 0 22px;font-size:23px;border-bottom:2px solid var(--accent);padding-bottom:9px;text-transform:uppercase;letter-spacing:1px} /* Style section headings */
 h3{color:var(--text)} /* Keep subheadings consistent */
 .lead{font-size:1.05rem;max-width:760px} /* Style introductory paragraphs */
@@ -43,9 +44,9 @@ h3{color:var(--text)} /* Keep subheadings consistent */
 .event-card-link:hover{text-decoration:none} /* Remove standard link underline */
 .event-card{height:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease} /* Style individual event cards */
 .event-card-link:hover .event-card{transform:translateY(-3px);box-shadow:0 8px 24px rgba(71,68,72,.13);border-color:var(--accent)} /* Show visually that cards are clickable */
-.event-card img{width:100%;height:250px;object-fit:cover;display:block} /* Standardise single images */
-.event-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:4px} /* Arrange paired photographs */
-.event-gallery img{height:190px} /* Standardise paired image height */
+.event-card img{width:100%;height:auto;object-fit:contain;display:block;background:var(--bg)} /* Show complete event images without cropping */
+.event-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;align-items:start} /* Arrange paired photographs */
+.event-gallery img{height:auto} /* Preserve the original image aspect ratio */
 .event-content{padding:18px} /* Add spacing around event text */
 .event-content h3{margin:0 0 4px;font-size:19px} /* Style event names */
 .event-content .meta{margin-bottom:9px} /* Add space below event metadata */
@@ -61,8 +62,8 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
   h1{font-size:39px} /* Reduce name size */
   .links-container{justify-content:center} /* Centre header buttons */
   .event-grid{grid-template-columns:1fr} /* Display one event per row */
-  .event-card img{height:230px} /* Reduce event image height */
-  .event-gallery img{height:170px} /* Reduce paired-image height */
+  .event-gallery{grid-template-columns:1fr} /* Stack paired preview images on phones */
+  .event-card img,.event-gallery img{height:auto} /* Keep event photographs uncropped on phones */
 }
 </style>
 </head>
@@ -75,7 +76,7 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
     <h1>Ioanna Garefalaki</h1> <!-- Name -->
     <p class="subtitle">Evolutionary Biologist | Science Writer &amp; Communicator | PhD Candidate</p> <!-- Professional identity -->
     <div class="links-container"> <!-- Main portfolio links -->
-      <a href="writing/" class="btn primary">Science Writing</a> <!-- Open the writing portfolio -->
+      <a href="writing/" class="btn">Science Writing</a> <!-- Open the writing portfolio -->
       <a href="events/" class="btn">Events</a> <!-- Open the visual events archive -->
       <a href="images/Garefalaki_CV_small_2026.pdf" class="btn">CV</a> <!-- Open the CV -->
       <a href="https://ioannagarefalaki.substack.com" class="btn" target="_blank" rel="noopener">Substack</a> <!-- Open Substack -->
@@ -117,6 +118,7 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
 <section class="section" id="projects"> <!-- Highlight major research projects -->
   <h2>Selected Research Projects</h2>
   <div class="project-list">
+
     <div class="project"> <!-- First PhD project -->
       <h3>DNA methylation repeatability and technical variation</h3>
       <div class="meta">LMU Munich · Wolf Lab</div>
