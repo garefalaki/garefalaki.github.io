@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ioanna Garefalaki | Evolutionary Biologist & Science Communicator</title>
-<meta name="description" content="Ioanna Garefalaki, evolutionary biologist, computational genomics researcher, science writer and communicator at LMU Munich and IMPRS-BI.">
+<meta charset="UTF-8"> <!-- Use UTF-8 characters -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make the page responsive -->
+<title>Ioanna Garefalaki | Evolutionary Biologist & Science Communicator</title> <!-- Browser title -->
+<meta name="description" content="Ioanna Garefalaki, evolutionary biologist, computational genomics researcher, science writer and communicator at LMU Munich and IMPRS-BI."> <!-- Search description -->
 
 <style>
 :root{--bg:#f1f0ea;--card:#e8e8e4;--text:#2d232e;--muted:#6f686f;--accent:#534b52;--border:#d5d2cd;--white:#f8f7f2} /* Define the colour palette */
@@ -18,7 +18,7 @@ a:hover{color:var(--text)} /* Darken links on hover */
 h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:46px;font-weight:500;line-height:1.05} /* Style the main name */
 .subtitle{font-size:1.08rem;color:var(--accent);font-weight:650;margin:.7rem 0 0} /* Style the professional subtitle */
 .links-container{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap} /* Arrange header links */
-.btn{padding:9px 18px;background:var(--white);border-radius:22px;font-size:14px;color:var(--text)!important;text-decoration:none;border:1px solid var(--border);transition:.2s} /* Style buttons */
+.btn{display:inline-block;padding:9px 18px;background:var(--white);border-radius:22px;font-size:14px;color:var(--text)!important;text-decoration:none;border:1px solid var(--border);transition:.2s} /* Style buttons */
 .btn:hover{transform:translateY(-2px);border-color:var(--accent);text-decoration:none} /* Add button hover behaviour */
 .primary{background:var(--accent);color:white!important} /* Style the main button */
 .primary:hover{color:white!important} /* Keep main button text white */
@@ -39,7 +39,10 @@ h3{color:var(--text)} /* Keep subheadings consistent */
 .subheading{margin:34px 0 14px;font-family:Georgia,"Times New Roman",serif;font-size:22px;font-weight:500} /* Style subsections inside larger sections */
 .section-intro{color:var(--muted);max-width:760px;margin-top:-8px;margin-bottom:22px} /* Style short explanatory text */
 .event-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:24px} /* Arrange event cards in two columns */
-.event-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;overflow:hidden} /* Style individual event cards */
+.event-card-link{display:block;color:inherit!important;text-decoration:none} /* Make the whole card clickable */
+.event-card-link:hover{text-decoration:none} /* Remove standard link underline */
+.event-card{height:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease} /* Style individual event cards */
+.event-card-link:hover .event-card{transform:translateY(-3px);box-shadow:0 8px 24px rgba(71,68,72,.13);border-color:var(--accent)} /* Show visually that cards are clickable */
 .event-card img{width:100%;height:250px;object-fit:cover;display:block} /* Standardise single images */
 .event-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:4px} /* Arrange paired photographs */
 .event-gallery img{height:190px} /* Standardise paired image height */
@@ -47,6 +50,8 @@ h3{color:var(--text)} /* Keep subheadings consistent */
 .event-content h3{margin:0 0 4px;font-size:19px} /* Style event names */
 .event-content .meta{margin-bottom:9px} /* Add space below event metadata */
 .event-content p{margin:0;font-size:14px;line-height:1.6} /* Style event descriptions */
+.event-more{display:inline-block;margin-top:11px;font-size:13px;font-weight:700;color:var(--accent)} /* Style the view-event prompt */
+.archive-link{margin-top:26px;text-align:center} /* Centre the archive button */
 footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);font-size:13px} /* Style the footer */
 
 @media(max-width:650px){ /* Adapt the website for phones */
@@ -54,7 +59,7 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
   .top-section{flex-direction:column;text-align:center;padding-top:38px} /* Stack the introductory section vertically */
   .top-section img{width:170px;height:170px} /* Reduce portrait size */
   h1{font-size:39px} /* Reduce name size */
-  .links-container{justify-content:center} /* Centre navigation buttons */
+  .links-container{justify-content:center} /* Centre header buttons */
   .event-grid{grid-template-columns:1fr} /* Display one event per row */
   .event-card img{height:230px} /* Reduce event image height */
   .event-gallery img{height:170px} /* Reduce paired-image height */
@@ -71,6 +76,7 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
     <p class="subtitle">Evolutionary Biologist | Science Writer &amp; Communicator | PhD Candidate</p> <!-- Professional identity -->
     <div class="links-container"> <!-- Main portfolio links -->
       <a href="writing/" class="btn primary">Science Writing</a> <!-- Open the writing portfolio -->
+      <a href="events/" class="btn">Events</a> <!-- Open the visual events archive -->
       <a href="images/Garefalaki_CV_small_2026.pdf" class="btn">CV</a> <!-- Open the CV -->
       <a href="https://ioannagarefalaki.substack.com" class="btn" target="_blank" rel="noopener">Substack</a> <!-- Open Substack -->
       <a href="https://github.com/garefalaki" class="btn" target="_blank" rel="noopener">GitHub</a> <!-- Open GitHub -->
@@ -111,42 +117,44 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
 <section class="section" id="projects"> <!-- Highlight major research projects -->
   <h2>Selected Research Projects</h2>
   <div class="project-list">
-    <div class="project">
+
+    <div class="project"> <!-- First PhD project -->
       <h3>DNA methylation repeatability and technical variation</h3>
       <div class="meta">LMU Munich · Wolf Lab</div>
       <p>Developing statistical approaches to quantify DNA methylation repeatability and distinguish biological variation from technical measurement variation in large-scale epigenomic datasets.</p>
     </div>
 
-    <div class="project">
+    <div class="project"> <!-- Second PhD project -->
       <h3>Quantitative genetic modelling of epigenetic variation</h3>
       <div class="meta">LMU Munich · Wolf Lab</div>
       <p>Using pedigrees of wild blue tits and large EM-seq/RRBS datasets to investigate whether DNA methylation can be modelled as a quantitative trait and to estimate its heritable component.</p>
     </div>
 
-    <div class="project">
+    <div class="project"> <!-- Human multi-omics project -->
       <h3>Human multi-omics and vaccine response</h3>
       <div class="meta">Biomedical Sciences Research Center “Alexander Fleming”</div>
       <p>Analysed transcriptomic and proteomic responses to BNT162b2 vaccination across healthy, elderly and Multiple Myeloma cohorts.</p>
     </div>
 
-    <div class="project">
+    <div class="project"> <!-- MSc genomics project -->
       <h3>Evolutionary genomics of transposable elements</h3>
       <div class="meta">FORTH / University of Crete</div>
       <p>Studied genetic variation and signatures of selection around polymorphic transposable elements in rice using population-genomic analyses and an open-source workflow.</p>
     </div>
+
   </div>
 </section>
 
-<section class="section" id="science-communication"> <!-- Present public-facing science communication work -->
+<section class="section" id="science-communication"> <!-- Present science communication work -->
   <h2>Science Communication &amp; Public Engagement</h2>
 
-  <div class="writing-callout"> <!-- Link prominently to the writing archive -->
+  <div class="writing-callout"> <!-- Highlight the writing portfolio -->
     <h3>Science Writing &amp; Communication Portfolio</h3>
     <p>Selected long-form writing, published features and an archive of science communication in Greek and English.</p>
     <a class="btn primary" href="writing/">Explore my writing →</a>
   </div>
 
-  <ul class="outreach" style="margin-top:26px"> <!-- Summarise science communication experience -->
+  <ul class="outreach" style="margin-top:26px"> <!-- Summarise public-facing experience -->
     <li><strong>Pint of Science Munich</strong> · Organizer, 2026–Present</li>
     <li><strong>Soapbox Science Munich</strong> · Featured speaker, 2026</li>
     <li><strong>R.E.A.L. Science</strong> · Science communication, 2021–Present</li>
@@ -156,119 +164,80 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
     <li><strong>Ligi Epistimi na Goustaroume</strong> · Staff writer and editorial co-administrator for a Greek science community with 16,000+ followers, 2014–2017</li>
   </ul>
 
-  <h3 class="subheading">Selected Public Engagement</h3> <!-- Introduce visual outreach examples -->
+  <h3 class="subheading">Featured Events</h3> <!-- Show only a compact selection on the homepage -->
+  <p class="section-intro">A selection of public engagement and scientific communication activities. The full visual archive includes additional events and photographs.</p>
 
-  <div class="event-grid"> <!-- Display public outreach cards -->
+  <div class="event-grid"> <!-- Start featured event cards -->
 
-    <article class="event-card"> <!-- Soapbox Science -->
-      <div class="event-gallery">
-        <img src="images/soap2.JPG" alt="Ioanna Garefalaki speaking at Soapbox Science Munich 2026">
-        <img src="images/soap1.jpg" alt="Ioanna Garefalaki engaging with the public at Soapbox Science Munich 2026">
-      </div>
-      <div class="event-content">
-        <h3>Soapbox Science Munich</h3>
-        <div class="meta">2026 · Featured speaker · Munich, Germany</div>
-        <p>Delivered the one-hour interactive public talk “Blaumeise Family Tree: A Complicated Story of DNA Decorations”, using props and visual demonstrations to explain evolutionary biology, genetics, epigenetics and DNA methylation without slides.</p>
-      </div>
-    </article>
+    <a class="event-card-link" href="events/soapbox-science-2026/"> <!-- Open the Soapbox detail page -->
+      <article class="event-card">
+        <div class="event-gallery">
+          <img src="images/soap2.JPG" alt="Ioanna Garefalaki speaking at Soapbox Science Munich 2026">
+          <img src="images/soap1.jpg" alt="Ioanna Garefalaki engaging with the public at Soapbox Science Munich 2026">
+        </div>
+        <div class="event-content">
+          <h3>Soapbox Science Munich</h3>
+          <div class="meta">2026 · Featured speaker · Munich, Germany</div>
+          <p>Interactive public communication of evolutionary biology, genetics, epigenetics and DNA methylation using props and live demonstrations.</p>
+          <span class="event-more">View event &amp; photos →</span>
+        </div>
+      </article>
+    </a>
 
-    <article class="event-card"> <!-- Researchers Night -->
-      <div class="event-gallery">
-        <img src="images/patra5.jpg" alt="Visitors exploring biological specimens during Researchers' Night Greece">
-        <img src="images/patra4.jpg" alt="Comparative zoology specimens displayed during Researchers' Night Greece">
-      </div>
-      <div class="event-content">
-        <h3>Researchers' Night Greece</h3>
-        <div class="meta">2017 &amp; 2018 · Exhibitor &amp; presenter</div>
-        <p>Participated in interactive public science activities and discussed biology, genetics, molecular biology and evolution directly with visitors.</p>
-      </div>
-    </article>
+    <a class="event-card-link" href="events/smbe-2026/"> <!-- Open the SMBE detail page -->
+      <article class="event-card">
+        <div class="event-gallery">
+          <img src="images/smbe1.jpg" alt="Ioanna Garefalaki presenting research at SMBE 2026">
+          <img src="images/smbe2.jpg" alt="DNA methylation repeatability poster presented at SMBE 2026">
+        </div>
+        <div class="event-content">
+          <h3>SMBE 2026</h3>
+          <div class="meta">2026 · Poster presentation · Copenhagen, Denmark</div>
+          <p>Presented “A statistical framework for DNA methylation repeatability in natural populations” at the Society for Molecular Biology &amp; Evolution annual meeting.</p>
+          <span class="event-more">View event &amp; photos →</span>
+        </div>
+      </article>
+    </a>
 
-    <article class="event-card"> <!-- Patras Science Festival -->
-      <div class="event-gallery">
-        <img src="images/patrafestival.jpg" alt="Public science activity at Patras Science Festival">
-        <img src="images/patra8.jpg" alt="Ioanna Garefalaki participating in science outreach in Patras">
-      </div>
-      <div class="event-content">
-        <h3>Patras Science Festival</h3>
-        <div class="meta">2016 · Presenter · Patras, Greece</div>
-        <p>Participated in public-facing science activities and presented biological concepts to audiences with different levels of scientific background.</p>
-      </div>
-    </article>
+    <a class="event-card-link" href="events/evogen-2026/"> <!-- Open the EvoGen detail page -->
+      <article class="event-card">
+        <div class="event-gallery">
+          <img src="images/evogen1.jpg" alt="Ioanna Garefalaki presenting research at EvoGen Munich 2026">
+          <img src="images/evogen2.jpg" alt="Scientific presentation at EvoGen Munich 2026">
+        </div>
+        <div class="event-content">
+          <h3>EvoGen Munich</h3>
+          <div class="meta">2026 · Scientific talk · Munich, Germany</div>
+          <p>Presented research on the technical repeatability of DNA methylation in two wild avian species.</p>
+          <span class="event-more">View event &amp; photos →</span>
+        </div>
+      </article>
+    </a>
 
-    <article class="event-card"> <!-- Astronomy Society Orion -->
-      <div class="event-gallery">
-        <img src="images/orion.jpg" alt="Astronomy Society of Patras Orion public outreach activity">
-        <img src="images/parnonas1.jpg" alt="Night sky during an astronomy gathering at Mount Parnon">
-      </div>
-      <div class="event-content">
-        <h3>Astronomy Society of Patras “Orion”</h3>
-        <div class="meta">2014–2017 · Public astronomy outreach · Patras, Greece</div>
-        <p>Participated in public observational events, educational activities and stargazing sessions promoting astronomy and scientific literacy.</p>
-      </div>
-    </article>
-
-    <article class="event-card"> <!-- National astronomy gathering -->
-      <div class="event-gallery">
-        <img src="images/parnonas3.jpg" alt="Astronomy gathering at Mount Parnon in Greece">
-        <img src="images/parnonas4.jpg" alt="Telescopes prepared for observations at Mount Parnon">
-      </div>
-      <div class="event-content">
-        <h3>10th National Gathering of Amateur Astronomers</h3>
-        <div class="meta">2017 · Event volunteer · Mount Parnon, Greece</div>
-        <p>Supported the organisation and public-engagement activities of the national amateur astronomy gathering at Mount Parnon.</p>
-      </div>
-    </article>
-
-    <article class="event-card"> <!-- EvoKE -->
-      <div class="event-gallery">
-        <img src="images/evoke1.jpg" alt="Participants at EvoKE 2019">
-        <img src="images/evoke3.jpg" alt="Session at EvoKE 2019">
-      </div>
-      <div class="event-content">
-        <h3>EvoKE 2019</h3>
-        <div class="meta">2019 · Evolutionary Knowledge for Everyone</div>
-        <p>Participated in an international meeting focused on evolutionary biology communication, education and engagement between evolutionary research and society.</p>
-      </div>
-    </article>
+    <a class="event-card-link" href="events/researchers-night/"> <!-- Open the Researchers Night detail page -->
+      <article class="event-card">
+        <div class="event-gallery">
+          <img src="images/patra5.jpg" alt="Visitors exploring biological specimens during Researchers' Night Greece">
+          <img src="images/patra4.jpg" alt="Comparative zoology specimens displayed during Researchers' Night Greece">
+        </div>
+        <div class="event-content">
+          <h3>Researchers' Night Greece</h3>
+          <div class="meta">2017 &amp; 2018 · Exhibitor &amp; presenter</div>
+          <p>Hands-on public engagement around biology, molecular biology, genetics, evolution and biodiversity.</p>
+          <span class="event-more">View event &amp; photos →</span>
+        </div>
+      </article>
+    </a>
 
   </div>
-</section>
 
-<section class="section" id="scientific-communication"> <!-- Show scientific presentation experience separately from public outreach -->
-  <h2>Scientific Communication</h2>
-  <p class="section-intro">Selected examples of communicating research to specialist scientific audiences through talks and poster presentations.</p>
-
-  <div class="event-grid">
-
-    <article class="event-card"> <!-- SMBE 2026 -->
-      <div class="event-gallery">
-        <img src="images/smbe1.jpg" alt="Ioanna Garefalaki presenting research at SMBE 2026">
-        <img src="images/smbe2.jpg" alt="DNA methylation repeatability poster presented at SMBE 2026">
-      </div>
-      <div class="event-content">
-        <h3>Society for Molecular Biology &amp; Evolution — SMBE 2026</h3>
-        <div class="meta">2026 · Poster presentation · Copenhagen, Denmark</div>
-        <p>Presented “A statistical framework for DNA methylation repeatability in natural populations”, introducing a framework for quantifying technical repeatability and measurement variation in DNA methylation data from wild populations.</p>
-      </div>
-    </article>
-
-    <article class="event-card"> <!-- EvoGen Munich -->
-      <div class="event-gallery">
-        <img src="images/evogen1.jpg" alt="Ioanna Garefalaki presenting research at EvoGen Munich 2026">
-        <img src="images/evogen2.jpg" alt="Scientific presentation at EvoGen Munich 2026">
-      </div>
-      <div class="event-content">
-        <h3>EvoGen Munich</h3>
-        <div class="meta">2026 · Scientific talk · Munich, Germany</div>
-        <p>Presented “Technical repeatability of DNA methylation in two wild avian species” at the Evolutionary Genetics Community Conference.</p>
-      </div>
-    </article>
-
+  <div class="archive-link"> <!-- Link to the complete archive -->
+    <a class="btn primary" href="events/">Explore all events →</a>
   </div>
+
 </section>
 
-<section class="section" id="teaching"> <!-- Summarise teaching and education work -->
+<section class="section" id="teaching"> <!-- Summarise teaching experience -->
   <h2>Teaching &amp; Education</h2>
 
   <ul class="outreach">
@@ -280,7 +249,7 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
   </ul>
 </section>
 
-<section class="section" id="training"> <!-- List selected science communication training -->
+<section class="section" id="training"> <!-- List selected communication training -->
   <h2>Communication Training</h2>
 
   <ul class="outreach">
@@ -290,24 +259,24 @@ footer{max-width:900px;margin:40px auto 70px;padding:0 30px;color:var(--muted);f
   </ul>
 </section>
 
-<section class="section" id="community"> <!-- Show conservation-related volunteering -->
+<section class="section" id="community"> <!-- Summarise wildlife engagement -->
   <h2>Community &amp; Wildlife Engagement</h2>
 
-  <div class="event-grid">
-
-    <article class="event-card"> <!-- ANIMA -->
+  <a class="event-card-link" href="events/anima/"> <!-- Open the ANIMA detail page -->
+    <article class="event-card">
       <img src="images/anima.jpg" alt="Wildlife rescue and rehabilitation volunteering with ANIMA">
       <div class="event-content">
         <h3>ANIMA — Hellenic Wildlife Care Association</h3>
         <div class="meta">2020–2021 · Transport &amp; rescue volunteer · Greece</div>
         <p>Supported wildlife rescue and rehabilitation through animal transport and related volunteering, complementing my broader interest in biodiversity and conservation.</p>
+        <span class="event-more">View activity &amp; photos →</span>
       </div>
     </article>
+  </a>
 
-  </div>
 </section>
 
-<footer>© Ioanna Garefalaki · Evolutionary biology, genomics and science communication.</footer>
+<footer>© Ioanna Garefalaki · Evolutionary biology, genomics and science communication.</footer> <!-- Footer -->
 
 </body>
 </html>
